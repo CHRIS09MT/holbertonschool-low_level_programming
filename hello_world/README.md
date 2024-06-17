@@ -8,4 +8,4 @@ R//: gcc -c $CFILE
 R//: gcc -S $CFILE
 
 3) Escribe un script que compile un fichero C y cree un ejecutable llamado cisfun.
-R//: 
+R//: gcc $CFILE -o cisfun
