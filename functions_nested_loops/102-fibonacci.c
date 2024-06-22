@@ -8,15 +8,15 @@
 int main(void)
 {
 	int s;
-	unsigned long long int x = 1, y = 1, i;
+	unsigned long long x = 1, y = 1, i;
 
-	printf("%lld, %lld, ", x, y);
+	printf("%llu, %llu, ", x, y);
 	for (s = 3; s <= 50; s++)
 	{
 		i = x + y;
 		x = y;
 		y = i;
-		printf("%lld", y);
+		printf("%llu", y);
 
 		if (s < 50)
 			printf(", ");
