@@ -12,7 +12,7 @@ int main(void)
 
 	printf("%lu, ", x);
 
-	for (s = 2; s <= 101; s++)
+	for (s = 3; s <= 100; s++)
 	{
 		i = x + y;
 		x = y;
@@ -20,7 +20,7 @@ int main(void)
 
 		printf("%lu", y);
 
-		if (s < 101)
+		if (s < 100)
 			printf(", ");
 	}
 	printf("\n");
