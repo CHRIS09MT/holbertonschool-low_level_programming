@@ -12,12 +12,14 @@ int main(void)
 
 	printf("%lu, %lu", x, y);
 
-	for (s = 3; s <= 98; s++)
+	while (s < 96)
 	{
 		i = x + y;
+		printf(", %lu", i);
+
 		x = y;
 		y = i;
-		printf(", %lu", y);
+		s++;
 	}
 	printf("\n");
 	return (0);
