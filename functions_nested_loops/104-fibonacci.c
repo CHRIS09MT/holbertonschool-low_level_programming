@@ -15,10 +15,9 @@ int main(void)
 	for (s = 3; s <= 98; s++)
 	{
 		i = x + y;
-		printf(", %lu", i);
-
 		x = y;
 		y = i;
+		printf(", %lu", y);
 	}
 	printf("\n");
 	return (0);
