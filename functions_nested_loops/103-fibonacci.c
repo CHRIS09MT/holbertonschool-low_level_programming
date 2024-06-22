@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	unsigned long x = 1, y = 1, i;
+	unsigned long x = 1, y = 2, i;
 	unsigned long s = 2;
 
 	while (y <= 4000000)
