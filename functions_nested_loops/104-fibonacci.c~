@@ -8,18 +8,18 @@
 int main(void)
 {
 	int s;
-	unsigned long x = 1, y = 2, i;
+	unsigned long x = 1, y = 1, i;
+	printf("%lu", x);
 
-	printf("%lu, %lu, ", x, y);
-
-	for (s = 3; s <= 98; s++)
+	for(s = 3; s <= 101; s++)
 	{
 		i = x + y;
-		printf("%lu", i);
 		x = y;
 		y = i;
 
-		if (s < 98)
+		printf("%lu", y);
+
+		if ( s < 101)
 			printf(", ");
 	}
 	printf("\n");
