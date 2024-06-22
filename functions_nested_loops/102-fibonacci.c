@@ -8,9 +8,9 @@
 int main(void)
 {
 	int s;
-	unsigned long x = 0, y = 1, i;
+	unsigned long x = 1, y = 1, i;
 
-	printf("%lu, %lu, ", x, y);
+	printf("%lu, ", x);
 	for (s = 3; s <= 50; s++)
 	{
 		i = x + y;
