@@ -7,16 +7,16 @@
 
 int main(void)
 {
-	int s, x = 1, y = 1, i;
+	int s;
+	long long int x = 1, y = 1, i;
 
-	printf("%d, %d, ", x, y);
-	
+	printf("%lld, %lld, ", x, y);
 	for (s = 3; s <= 50; s++)
 	{
 		i = x + y;
 		x = y;
 		y = i;
-		printf("%d", y);
+		printf("%lld", y);
 
 		if (s < 50)
 			printf(", ");
