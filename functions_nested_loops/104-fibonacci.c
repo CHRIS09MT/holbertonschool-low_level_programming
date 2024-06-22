@@ -7,8 +7,8 @@
 
 int main(void)
 {
-	int s;
 	unsigned long x = 1, y = 2, i;
+	int s = 0;
 
 	printf("%lu, %lu", x, y);
 
