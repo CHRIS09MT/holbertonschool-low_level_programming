@@ -7,18 +7,18 @@
 
 int main(void)
 {
-	int s;
 	unsigned long x = 1, y = 1, i;
+	unsigned long s = 2;
 
-	for (s = 3; s <= 34; s++)
+	while (y <= 4000000)
 	{
 		i = x + y;
 		x = y;
 		y = i;
 
-		if (s == 34)
-			printf("%lu", y);
+		if (y % 2 == 0)
+			s += y;
 	}
-	printf("\n");
+	printf("%lu\n", s);
 	return (0);
 }
