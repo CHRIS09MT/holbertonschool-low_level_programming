@@ -11,7 +11,7 @@ int main(void)
 	unsigned long x = 1, y = 1, i;
 
 	printf("%lu, ", x);
-	for (s = 3; s <= 50; s++)
+	for (s = 3; s <= 51; s++)
 	{
 		i = x + y;
 		x = y;
