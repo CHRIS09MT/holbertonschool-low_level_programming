@@ -12,7 +12,7 @@ int main(void)
 
 	printf("%lu, %lu", x, y);
 
-	while (s < 96)
+	while (s < 97)
 	{
 		i = x + y;
 		printf(", %lu", i);
