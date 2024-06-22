@@ -20,6 +20,8 @@ int main(void)
 		x = y;
 		y = i;
 		s++;
+		if (s == 96)
+			printf("     ");
 	}
 	printf("\n");
 	return (0);
