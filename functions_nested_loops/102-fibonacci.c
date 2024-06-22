@@ -7,9 +7,11 @@
 
 int main(void)
 {
-	int s, x = 1, y = 2, i;
+	int s, x = 1, y = 1, i;
 
-	for (s = 1; s <= 50; s++)
+	printf("%d, %d, ", x, y);
+	
+	for (s = 3; s <= 50; s++)
 	{
 		i = x + y;
 		x = y;
