@@ -8,11 +8,11 @@
 int main(void)
 {
 	unsigned long x = 1, y = 2, i;
-	int s = 0;
+	int s = 1;
 
 	printf("%lu, %lu", x, y);
 
-	while (s < 96)
+	while (s < 97)
 	{
 		i = x + y;
 		printf(", %lu", i);
