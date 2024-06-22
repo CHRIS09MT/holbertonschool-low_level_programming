@@ -16,7 +16,7 @@ int main(void)
 		x = y;
 		y = i;
 
-		if (s == 33)
+		if (s == 34)
 			printf("%lu", y);
 	}
 	printf("\n");
