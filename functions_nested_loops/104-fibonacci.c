@@ -10,17 +10,15 @@ int main(void)
 	int s;
 	unsigned long x = 1, y = 2, i;
 
-	printf("%lu, %lu, ", x, y);
+	printf("%lu, %lu", x, y);
 
 	for (s = 3; s <= 98; s++)
 	{
 		i = x + y;
-		printf("%lu", i);
+		printf(", %lu", i);
+
 		x = y;
 		y = i;
-
-		if (s < 98)
-			printf(", ");
 	}
 	printf("\n");
 	return (0);
