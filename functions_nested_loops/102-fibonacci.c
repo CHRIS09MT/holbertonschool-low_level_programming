@@ -18,7 +18,7 @@ int main(void)
 		y = i;
 		printf("%lu", y);
 
-		if (s < 50)
+		if (s < 51)
 			printf(", ");
 	}
 	printf("\n");
