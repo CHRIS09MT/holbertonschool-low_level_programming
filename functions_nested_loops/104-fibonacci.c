@@ -15,11 +15,9 @@ int main(void)
 	for (i = 0; i < 96; i++)
 	{
 		s = x + y;
-		printf("%lu, ", s);
-
 		x = y;
 		y = s;
-		s++;
+		printf("%lu, ", s);
 	}
 	printf("\n");
 	return (0);
