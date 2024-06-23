@@ -7,7 +7,7 @@
 
 int main(void)
 {
-	unsigned long x = 1, y = 2, s;
+	unsigned long int x = 1, y = 2, s;
 	int i;
 
 	printf("%lu, %lu ", x, y);
