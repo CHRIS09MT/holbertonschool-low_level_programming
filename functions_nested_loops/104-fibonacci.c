@@ -7,18 +7,18 @@
 
 int main(void)
 {
-	unsigned long x = 1, y = 2, i;
-	int s = 0;
+	unsigned long x = 1, y = 2, s;
+	int i;
 
-	printf("%lu, %lu", x, y);
+	printf("%lu, %lu ", x, y);
 
-	while (s < 96)
+	for (i = 0; i < 96; i++)
 	{
-		i = x + y;
-		printf(", %lu", i);
+		s = x + y;
+		printf("%lu, ", s);
 
 		x = y;
-		y = i;
+		y = s;
 		s++;
 	}
 	printf("\n");
