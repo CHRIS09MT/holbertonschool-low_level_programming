@@ -1,0 +1,24 @@
+#include <stdlib.h>
+#include "main.h"
+
+/**
+ * print_number - print the numbers with his unsigned
+ * @n: amoun the n times
+ */
+
+void print_number(int n)
+{
+	unsigned int abs;
+
+	if (n < 0)
+	{
+		abs = (unsigned int) (n * -1);
+		_putchar(45);
+	}
+	else
+		abs = (unsigned int) n;
+
+	if (abs / 10 > 0)
+		print_number(abs / 10);
+	_putchar(abs % 10 + '0');
+}
