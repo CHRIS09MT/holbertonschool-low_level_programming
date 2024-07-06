@@ -4,6 +4,7 @@
  * _pow_recursion - multiply x a amount the y
  * @x: number to multiply
  * @y: amount the multiply
+ * Return: If y is lower than 0, the function should return -1
  */
 
 int _pow_recursion(int x, int y)
@@ -12,5 +13,5 @@ int _pow_recursion(int x, int y)
 		return (-1);
 	else if (y == 0)
 		return (1);
-	return (x * _pow_recursion (x, y - 1));
+	return (x * _pow_recursion(x, y - 1));
 }
