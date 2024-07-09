@@ -31,9 +31,9 @@ char *str_concat(char *s1, char *s2)
 	for (b = 0, c = 0; b < (n1 + n2 + 1); b++)
 	{
 		if (b < n1)
-			a[b] = n1[b];
+			a[b] = s1[b];
 		else
-			a[b] = n2[c++];
+			a[b] = s2[c++];
 	}
 
 	return (a);
