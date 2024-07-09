@@ -33,7 +33,7 @@ char *str_concat(char *s1, char *s2)
 		if (b < n1)
 			a[b] = n1[b];
 		else
-			a[b] = n2[c++]
+			a[b] = n2[c++];
 	}
 
 	return (a);
