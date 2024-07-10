@@ -2,6 +2,10 @@
 #include <stdlib.h>
 
 /**
+ * alloc_grid - print scuad
+ * @width: ancho
+ * @height: alto
+ * Return: retorna la cadena
  */
 
 int **alloc_grid(int width, int height)
@@ -19,11 +23,11 @@ int **alloc_grid(int width, int height)
 
 	for (; a < height; a++)
 	{
-		arr[a] = malloc(width * sizeof (int));
+		arr[a] = malloc(width * sizeof(int));
 
 		if (!arr[a])
 		{
-			for(; a >= 0; a--)
+			for (; a >= 0; a--)
 				free(arr[a]);
 			free(arr);
 			return (NULL);
