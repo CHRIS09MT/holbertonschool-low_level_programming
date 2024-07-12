@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <string.h>
 
 /**
  * _calloc - pedir memoria para los arrays de tamaño 'size'
@@ -11,20 +10,21 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *a;
-	unsigned int total;
+	char *a;
+	unsigned int b = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	total = nmemb * size;
+	a = malloc(nmemb * size);
 
-	a = malloc(total);
+	if (a != NULL)
+	{
+		for (; b < (nmemb * size); b++)
+			a[b] = 0;
+		return (a);
+	}
 
-	if (a == NULL)
+	else
 		return (NULL);
-
-	memset(a, 0, total);
-
-	return (a);
 }
