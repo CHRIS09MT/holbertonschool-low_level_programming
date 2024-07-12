@@ -12,15 +12,12 @@ int *array_range(int min, int max)
 {
 	int *array;
 	int b, c = 0;
-
-    /** esto verifica que 'min' no sea mayor que 'max' */
- 	if (min > max)
+/** esto verifica que 'min' no sea mayor que 'max' */
+	if (min > max)
 		return (NULL);
-
-	/** aquí se asigna memoria para 'array' */
+/** aquí se asigna memoria para 'array' */
 	array = malloc(sizeof(*array) * ((max - min) + 1));
-
-    /** se llena 'array' llevando 'min' hasta 'max' */
+/** se llena 'array' llevando 'min' hasta 'max' */
 	if (array != NULL)
 	{
 		for (b = min; b <= max; b++)
