@@ -1,32 +1,32 @@
-#include <stdlib.h>
 #include "dog.h"
+#include <stdlib.h>
 
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
 
 /**
-  * new_dog - ...
-  * @name: ...
-  * @age: ...
-  * @owner: ...
-  *
-  * Return: ...
-  */
+ * new_dog - creating a new dog
+ * @name: Name the new dog
+ * @age: Age the new dog
+ * @owner: New owner
+ * Return: Return new_dog
+ */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *max_dog;
-	int name_l = 0, own_l = 0;
+	int name1 = 0, own1 = 0;
 
 	if (name != NULL && owner != NULL)
 	{
-		name_l = _strlen(name) + 1;
-		own_l = _strlen(owner) + 1;
+		name1 = _strlen(name) + 1;
+		own1 = _strlen(owner) + 1;
 		max_dog = malloc(sizeof(dog_t));
 
 		if (max_dog == NULL)
 			return (NULL);
 
-		max_dog->name = malloc(sizeof(char) * name_l);
+		max_dog->name = malloc(sizeof(char) * name1);
 
 		if (max_dog->name == NULL)
 		{
@@ -34,7 +34,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			return (NULL);
 		}
 
-		max_dog->owner = malloc(sizeof(char) * own_l);
+		max_dog->owner = malloc(sizeof(char) * own1);
 
 		if (max_dog->owner == NULL)
 		{
@@ -47,43 +47,38 @@ dog_t *new_dog(char *name, float age, char *owner)
 		max_dog->owner = _strcpy(max_dog->owner, owner);
 		max_dog->age = age;
 	}
-
 	return (max_dog);
 }
 
 /**
-  * _strlen - Returns the length of a string
-  * @s: String to count
-  *
-  * Return: String length
-  */
+ * _strlen - Returns the length of a string
+ * @s: String to count
+ * Return: The string length
+ */
+
 int _strlen(char *s)
 {
 	int c = 0;
 
 	for (; *s != '\0'; s++)
-	{
 		c++;
-	}
 
 	return (c);
 }
 
 /**
-  * _strcpy - Copy a string
-  * @dest: Destination value
-  * @src: Source value
-  *
-  * Return: the pointer to dest
-  */
+ * _strcpy - Copy a string
+ * @dest: Destination value
+ * @src: Source value
+ * Return: the pointer to dest
+ */
+
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; src[i] != '\0'; i++)
-	{
+	for (; src[i] != '\0'; i++)
 		dest[i] = src[i];
-	}
 
 	dest[i++] = '\0';
 
