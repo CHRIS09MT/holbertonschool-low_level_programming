@@ -1,7 +1,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
-#include "function_pointers.h"
+#include "3-calc.h"
 
 /**
  * get_op_func - function that selects the correct function
@@ -11,20 +11,20 @@
 
 int (*get_op_func(char *s))(int, int)
 {
-	op_t ope[] = {
+	op_t ops[] = {
 		{"+", op_add},
 		{"-", op_sub},
 		{"*", op_mul},
 		{"/", op_div},
 		{"%", op_mod},
 		{NULL, NULL}
-	}
-	int a = 0;
+	};
+	int i = 0;
 
-	while (a < 5)
+	while (i < 5)
 	{
-		if (strcmp(s, ops[a].op) == 0)
-			return (ops[a].f);
+		if (strcmp(s, ops[i].op) == 0)
+			return (ops[i].f);
 		i++;
 	}
 	return (0);
