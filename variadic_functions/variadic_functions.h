@@ -6,14 +6,14 @@
  * struct argtps - a struct that containts the a char represnting a datatype
  * and a pointer to a function that prints it.
  * @arg: the char representing the datatype
- * @printFunction: the function to print it*
+ * @printFunc: the function to print it*
  * Description: a struct that containts the a char represnting a datatype
  */
 
 typedef struct argtps
 {
 	char arg;
-	void (*printFunction)(va_list);
+	void (*printFunc)(va_list);
 } argtype;
 
 int _putchar(char c);
