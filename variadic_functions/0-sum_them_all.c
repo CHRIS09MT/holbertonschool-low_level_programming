@@ -19,11 +19,7 @@ int sum_them_all(const unsigned int n, ...)
 	if (n != 0)
 	{
 		for (; ope < n; ope++)
-		{
-			int sig = va_arg(args, int);
-
-			ac += sig;
-		}
+			ac += va_arg(args, int);
 	}
 	else
 		return (0);
