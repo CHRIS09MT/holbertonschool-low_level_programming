@@ -3,6 +3,10 @@
 #include <string.h>
 
 /**
+* add_node - add a node to start of list
+* @head: pointer to the head of the list
+* @str: string to be added to the list
+* Return: return the length of the string
  */
 
 list_t *add_node(list_t **head, const char *str)
@@ -18,7 +22,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (!new_node->str)
 	{
 		free(new_node);
-                return (NULL);
+return (NULL);
 	}
 	while (str[length++] != '\0')
 		;
@@ -26,5 +30,5 @@ list_t *add_node(list_t **head, const char *str)
 	new_node->next = *head;
 	*head = new_node;
 
-	return(new_node);
+	return (new_node);
 }
