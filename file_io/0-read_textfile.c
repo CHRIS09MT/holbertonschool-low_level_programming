@@ -1,6 +1,4 @@
 #include "main.h"
-#include <sys/types.h>
-#include <unistd.h>
 
 /**
 * read_textfile - read a text file
@@ -26,12 +24,21 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(letters + 1); /** Allocate memory for buffer */
 
 	if (buffer == NULL)
+	{
+		close(fd);
 		return (0);
+	}
 
 	bytes_read = read(fd, buffer, letters); /** Read file into buffer */
 
 	if (bytes_read == -1)
+	{
+        	free(buffer);
+        	close(fd);
 		return (0);
+	}
+
+    	buffer[bytes_read] = '\0'; /** Null-terminate the buffer */
 
 		/** Prints the read content and amount bytes read */
 	write(STDOUT_FILENO, buffer, bytes_read);
