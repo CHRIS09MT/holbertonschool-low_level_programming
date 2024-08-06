@@ -27,17 +27,17 @@ int main(int argc, char *argv[])
 	if (file_to == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-		close(file_from), exit(98);
+		close(file_from), exit(99);
 	}
-	do
+	while ((bytes_read = read(file_from, buffer, sizeof(buffer))) > 0)
 	{
-		bytes_read = read(file_from, buffer, sizeof(buffer));
-		if (bytes_read == -1)
-			break;
 		bytes_written = write(file_to, buffer, bytes_read);
-		if (bytes_written == -1)
-		        exit(99);
-	} while (bytes_written > 0);
+		if (bytes_written == -1 || bytes_written != bytes_read)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
+                        close(file_from), close(file_to), exit(99);
+		}
+	}
 	if (bytes_read == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
