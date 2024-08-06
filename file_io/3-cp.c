@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 			break;
 		bytes_written = write(file_to, buffer, bytes_read);
 		if (bytes_written == -1)
-		        exit(99);
+		        exit(98);
 	} while (bytes_written > 0);
 	if (bytes_read == -1)
 	{
